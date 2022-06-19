@@ -37,7 +37,7 @@ namespace EPAMTestProject.Tests
             DriverInstance.CloseBrowser();
             TestLogger.LoggerShutDown();
         }
-
+        /*
         [Test]
         public void LoginHabrValidTest()
         {
@@ -47,7 +47,7 @@ namespace EPAMTestProject.Tests
 
             Assert.IsTrue(TestUtilities.Wait.Until(e => loginPage.CheckLogin).Displayed);
         }
-
+        */
         [Test]
         public void LoginHabrInvalidTest()
         {
@@ -67,7 +67,7 @@ namespace EPAMTestProject.Tests
 
             Assert.IsTrue(TestUtilities.Wait.Until(e => loginPage.CheckLoginInvalid).Displayed);
         }
-
+        /*
         [Test]
         public void SearchTextTest()
         {
@@ -96,6 +96,6 @@ namespace EPAMTestProject.Tests
             searchPage.SearchByRating();
 
             Assert.IsTrue(searchPage.CheckValidRating);
-        }
+        }*/
     }
 }
