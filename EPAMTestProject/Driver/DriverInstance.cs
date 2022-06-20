@@ -20,7 +20,9 @@ namespace EPAMTestProject.Driver
             if (_driver == null)
             {
                 var options = new ChromeOptions();
-                options.AddArgument("--disable-dev-shm-usage");
+                options.AddArguments("--no-sandbox");
+                options.AddArguments("--headless");
+                options.AddArguments("--disable-dev-shm-usage");
 
                 _driver = new ChromeDriver(options);
                 _driver.Manage().Window.Maximize();
