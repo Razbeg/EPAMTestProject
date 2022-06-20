@@ -20,7 +20,7 @@ namespace EPAMTestProject.Driver
             if (_driver == null)
             {
                 _driver = new ChromeDriver();
-                _driver.Manage().Window.Maximize();
+                _driver.Manage().Window.Size = new System.Drawing.Size(1920, 1080);
             }
 
             return _driver;
