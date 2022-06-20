@@ -19,8 +19,11 @@ namespace EPAMTestProject.Driver
         {
             if (_driver == null)
             {
-                _driver = new ChromeDriver();
-                _driver.Manage().Window.Size = new System.Drawing.Size(1920, 1080);
+                var options = new ChromeOptions();
+                options.AddArgument("--disable-dev-shm-usage");
+
+                _driver = new ChromeDriver(options);
+                _driver.Manage().Window.Maximize();
             }
 
             return _driver;
